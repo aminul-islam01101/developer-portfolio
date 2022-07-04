@@ -1,27 +1,24 @@
-/* general styles section start  */
-
+/*================ general styles section start ================== */
 html {
   font-size: 62.5%;
 }
 * {
   box-sizing: border-box;
 }
-::root {
-  --color-heading-1: #000;
-  --color-heading-2: #ffa500;
+:root {
+  --color-heading: #ffa500;
   --color-body: #ddd;
+  --border-radius: 0.7rem;
 }
 body {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.5;
   color: #333;
   margin: 0;
   padding: 0;
 }
-h1,
-h2,
-h3,
+
 p {
   margin-top: 0;
 }
@@ -29,17 +26,96 @@ img {
   max-width: 100%;
   display: block;
 }
-/* general styles section end  */
+h1 {
+  font-size: 5rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+/*-------------------- general styles section end------------- */
 
-/*utility classes section start  */
+
+/*------------utility classes section start------------------  */
 .container {
-  max-width: 100rem;
+  max-width: 120rem;
   margin: 0 auto;
   width: 90%;
+  padding: 3rem;
 }
 .split {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
+.btn {
+  background-image: linear-gradient(to right, #ff926f, #ff6b4e);
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  padding: 1.5rem 3rem;
+  border-radius: var(--border-radius);
+  font-size: 1.4rem;
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+}
+/*--------------utility classes section end------------------ */
 
-/*utility classes section end  */
+
+/* ----------------hero section start------------------------ */
+.left-section {
+  flex: 1 0 50%;
+}
+.right-section {
+  margin-left: 4%;
+}
+.hero {
+  background: url(/images/top-banner.png) no-repeat;
+}
+.orange-heading {
+  color: var(--color-heading);
+}
+/*---------------- hero section end -------------------------*/
+
+
+/* ------------------dream section start ---------------------*/
+.dream {
+  background: url(/images/dream-bg.png) no-repeat right;
+}
+/*------------------- dream section end-----------------------*/
+
+
+/*------------------- experience section start ---------------*/
+.experience {
+  background: url(/images/exp-bg.png) no-repeat center left;
+  margin-bottom: 10rem;
+}
+.experience .split {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+.experience--heading {
+  flex-basis: 100%;
+  text-align: center;
+}
+.experience--article {
+  flex-basis: calc((100% - 4%) / 2);
+  box-shadow: 0 0.1rem 1rem 0.3rem rgba(0, 0, 0, 0.1);
+  padding: 4rem;
+  border-radius: var(--border-radius);
+}
+.experience--article__left {
+  border-left: 5px solid var(--color-heading);
+}
+.experience--article__right {
+  border-left: 5px solid blue;
+  margin-left: 4%;
+}
+footer {
+  text-align: center;
+}
+/* ===================experience section end =============================*/
