@@ -30,3 +30,16 @@ img {
   display: block;
 }
 /* general styles section end  */
+
+/*utility classes section start  */
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+  width: 90%;
+}
+.split {
+  display: flex;
+  flex-direction: row;
+}
+
+/*utility classes section end  */
